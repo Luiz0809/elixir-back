@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'luiz0809/elixir-back'
-        PORT = '9090'
+        
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                         sh "docker pull ${DOCKER_IMAGE}"
-                        sh "docker run -d -p ${PORT}:8080 ${DOCKER_IMAGE}"
+                        sh "docker run -d -p 80:8080 ${DOCKER_IMAGE}"
                 }
             }
         }
