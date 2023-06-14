@@ -10,7 +10,7 @@ class CorssConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://elixirteste.sytes.net:3000")
+                .allowedOrigins("https://elixir.hopto.org")
                 .allowedMethods("GET", "POST", "PUT", "DELETE");
     }
 }
